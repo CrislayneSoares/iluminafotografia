@@ -74,7 +74,7 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              Uma revista visual que celebra a arte da fotografia, 
+              Uma galeria visual que celebra a arte da fotografia, 
               capturando momentos que transcendem o tempo e tocam a alma.
             </motion.p>
           </div>
@@ -360,11 +360,11 @@ export default function Home() {
           <div className="flex items-center justify-center gap-8 mb-8">
             <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer">
               <Instagram className="w-5 h-5" />
-              <span className="text-sm font-medium">@ilumina.fotografia</span>
+              <span className="text-sm font-medium">@iluminafotografia_</span>
             </div>
             <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer">
               <Mail className="w-5 h-5" />
-              <span className="text-sm font-medium">contato@ilumina.com</span>
+              <span className="text-sm font-medium">iluminafotografia4@gmail.com</span>
             </div>
           </div>
           
@@ -378,7 +378,7 @@ export default function Home() {
           
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-500 text-sm">
-              © 2024 Ilumina Fotografia - Revista Visual • Todos os direitos reservados
+              © 2024 Ilumina Fotografia - Galeria Visual • Todos os direitos reservados
             </p>
           </div>
         </div>
