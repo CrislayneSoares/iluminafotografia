@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, Heart, Sparkles, Eye, Instagram, Mail, ArrowRight, Quote } from 'lucide-react';
 import { useState } from 'react';
+import Image from "next/image";
 
 const images = [
   { src: '/imgs/IMG_6485.jpeg', alt: 'Retrato emocional 1', category: 'emotion', story: 'A pureza de um momento capturado através das lentes' },
@@ -131,8 +132,8 @@ export default function Home() {
           >
             <Quote className="w-12 h-12 text-purple-600 mx-auto mb-6" />
             <blockquote className="text-2xl md:text-3xl text-gray-800 font-light italic mb-4">
-              "A fotografia é a arte de capturar não apenas imagens, 
-              mas a essência da alma humana em um único momento."
+              &quot;A fotografia é a arte de capturar não apenas imagens, 
+              mas a essência da alma humana em um único momento.&quot;
             </blockquote>
             <p className="text-gray-600 font-medium">— Ilumina Fotografia</p>
           </motion.div>
@@ -178,10 +179,12 @@ export default function Home() {
                         >
                           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
-                              <img
+                              <Image
                                 src={image.src}
                                 alt={image.alt}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                width={400}
+                                height={500}
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
@@ -226,10 +229,12 @@ export default function Home() {
                         >
                           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
-                              <img
+                              <Image
                                 src={image.src}
                                 alt={image.alt}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                width={400}
+                                height={500}
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
@@ -281,10 +286,12 @@ export default function Home() {
                       >
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
                           <div className="aspect-[4/5] relative overflow-hidden">
-                            <img
+                            <Image
                               src={image.src}
                               alt={image.alt}
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                              width={400}
+                              height={500}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                           </div>
@@ -325,10 +332,12 @@ export default function Home() {
               onClick={(e) => e.stopPropagation()}
               className="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl"
             >
-              <img
+              <Image
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 className="w-full h-auto"
+                width={800}
+                height={1000}
               />
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{selectedImage.alt}</h3>
