@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ilumina Fotografia 📸✨
 
-## Getting Started
+Uma galeria de fotografia artística focada em retratos que capturam **emoção** e **magia**. Este projeto apresenta uma experiência visual única através de uma interface moderna e elegante.
 
-First, run the development server:
+## ✨ Características
 
+- **Design Responsivo**: Adapta-se perfeitamente a qualquer dispositivo
+- **Animações Suaves**: Utiliza Framer Motion para transições elegantes
+- **Galeria Interativa**: Efeitos de hover que destacam cada imagem
+- **Performance Otimizada**: Next.js com otimização automática de imagens
+- **Tema Escuro Elegante**: Gradientes roxos e rosas que complementam as fotos
+
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js 15** - Framework React com App Router
+- **TypeScript** - Tipagem estática para maior confiabilidade
+- **Tailwind CSS** - Framework CSS utilitário
+- **Framer Motion** - Biblioteca de animações
+- **Lucide React** - Ícones modernos e elegantes
+
+## 📦 Instalação
+
+1. Clone o repositório:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [url-do-repositorio]
+cd ilumina-fotografia
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instale as dependências:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Execute o servidor de desenvolvimento:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 
-## Learn More
+## 📁 Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+ilumina-fotografia/
+├── src/
+│   └── app/
+│       ├── page.tsx          # Página principal da galeria
+│       ├── layout.tsx        # Layout raiz da aplicação
+│       └── globals.css       # Estilos globais
+├── public/
+│   └── imgs/                 # Pasta com as imagens da galeria
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Personalização
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Adicionando Novas Imagens
 
-## Deploy on Vercel
+1. Coloque suas imagens na pasta `public/imgs/`
+2. Atualize o array `images` no arquivo `src/app/page.tsx`
+3. Adicione o caminho e descrição da nova imagem
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Modificando o Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Cores**: Edite as classes Tailwind no arquivo `page.tsx`
+- **Animações**: Ajuste os parâmetros do Framer Motion
+- **Layout**: Modifique o grid CSS para diferentes arranjos
+
+## 📱 Responsividade
+
+A galeria é totalmente responsiva:
+- **Mobile**: 1 coluna
+- **Tablet**: 2 colunas
+- **Desktop**: 3-4 colunas
+- **Large Desktop**: 4 colunas
+
+## 🌟 Destaques do Design
+
+- **Gradiente de Fundo**: Transição suave de roxo para rosa
+- **Efeitos de Hover**: Zoom e overlay nas imagens
+- **Animações de Entrada**: Cada imagem aparece com timing escalonado
+- **Scrollbar Personalizada**: Estilo único que combina com o tema
+- **Tipografia Gradiente**: Título com cores que se misturam
+
+## 📸 Sobre as Fotos
+
+As imagens selecionadas focam em retratos que transmitem:
+- **Emoção profunda** através de expressões autênticas
+- **Magia** capturada em momentos especiais
+- **Arte** através da composição e iluminação
+
+## 🚀 Deploy
+
+Este projeto pode ser facilmente deployado em:
+- **Vercel** (recomendado para Next.js)
+- **Netlify**
+- **Railway**
+- Qualquer plataforma que suporte Node.js
+
+## 📄 Licença
+
+Este projeto é de uso pessoal e educacional.
+
+---
+
+**Ilumina Fotografia** - Transformando momentos em arte eterna ✨
