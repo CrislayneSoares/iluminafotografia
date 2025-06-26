@@ -47,12 +47,12 @@ export default function Home() {
   const seasonsImages = images.filter(img => img.category === 'seasons');
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#F5F3EF] text-gray-900">
       {/* Magazine Header */}
       <motion.header 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-gray-50 to-white border-b border-gray-200"
+        className="bg-gradient-to-r from-[#F5F3EF] to-[#E8E1D4] border-b border-[#D6D6D6]"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div className="text-center">
@@ -61,11 +61,11 @@ export default function Home() {
               animate={{ scale: 1 }}
               className="inline-flex items-center gap-3 sm:gap-4 mb-6"
             >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
-                <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#E8E1D4] to-[#D6D6D6] rounded-full flex items-center justify-center shadow-lg">
+                <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-gray-700" />
               </div>
               <div className="text-left">
-                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 tracking-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-800 tracking-tight">
                   ILUMINA
                 </h1>
                 <p className="text-sm sm:text-lg text-gray-600 font-light">FOTOGRAFIA</p>
@@ -76,7 +76,7 @@ export default function Home() {
       </motion.header>
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <nav className="sticky top-0 z-40 bg-[#F5F3EF]/95 backdrop-blur-sm border-b border-[#D6D6D6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-8">
             {['all', 'landscape', 'nature', 'light', 'art', 'seasons'].map((category) => (
@@ -85,8 +85,8 @@ export default function Home() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                    ? 'bg-gradient-to-r from-[#E8E1D4] to-[#D6D6D6] text-gray-800 shadow-lg'
+                    : 'bg-[#F5F3EF] text-gray-600 hover:bg-[#E8E1D4] border border-[#D6D6D6]'
                 }`}
               >
                 {category === 'all' ? 'TODAS' : category === 'landscape' ? 'PAISAGENS' : category === 'nature' ? 'NATUREZA' : category === 'light' ? 'LUZ' : category === 'art' ? 'ARTE' : 'ESTAÇÕES'}
@@ -97,8 +97,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%239C92AC&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#F5F3EF] via-[#E8E1D4] to-[#D6D6D6] overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23D6D6D6&quot; fill-opacity=&quot;0.1&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
         
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
           <motion.div
@@ -107,9 +107,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="mb-6 sm:mb-8"
           >
-            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-gray-900 mb-4 sm:mb-6">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-gray-800 mb-4 sm:mb-6">
               ILUMINA
-              <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#E8E1D4] to-[#D6D6D6] bg-clip-text text-transparent">
                 FOTOGRAFIA
               </span>
             </h1>
@@ -119,7 +119,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-base sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light mb-8 sm:mb-12"
+            className="text-base sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light"
           >
             <p className="mb-4 sm:mb-6">
               Bem-vindo ao Ilumina Fotografia, um espaço onde a imagem é poesia e o tempo respira devagar. 
@@ -137,25 +137,11 @@ export default function Home() {
               com seus olhos e abrace sua alma.
             </p>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
-          >
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-              Explorar Galeria
-            </button>
-            <button className="border-2 border-purple-600 text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 text-sm sm:text-base">
-              Sobre Nós
-            </button>
-          </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#F5F3EF]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -164,7 +150,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
               APRESENTAÇÃO
             </h2>
             <div className="text-xl text-gray-700 leading-relaxed font-light space-y-6">
@@ -193,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-[#E8E1D4]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -202,10 +188,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
               GALERIA
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Descubra imagens que acalmam, emocionam e iluminam. Cada fotografia é um convite à contemplação.
             </p>
           </motion.div>
@@ -219,8 +205,8 @@ export default function Home() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                     selectedCategory === category
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                      : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                      ? 'bg-gradient-to-r from-[#F5F3EF] to-[#D6D6D6] text-gray-800 shadow-lg'
+                      : 'bg-[#F5F3EF] text-gray-600 hover:bg-[#D6D6D6] border border-[#D6D6D6]'
                   }`}
                 >
                   {category === 'all' ? 'TODAS' : category === 'landscape' ? 'PAISAGENS' : category === 'nature' ? 'NATUREZA' : category === 'light' ? 'LUZ' : category === 'art' ? 'ARTE' : 'ESTAÇÕES'}
@@ -262,7 +248,7 @@ export default function Home() {
                           onClick={() => setSelectedImage(image)}
                           className="group cursor-pointer"
                         >
-                          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                          <div className="bg-[#F5F3EF] rounded-2xl shadow-lg overflow-hidden border border-[#D6D6D6] hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
                               <Image
                                 src={image.src}
@@ -274,9 +260,9 @@ export default function Home() {
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
                             <div className="p-6">
-                              <h4 className="text-lg font-semibold text-gray-900 mb-2">{image.alt}</h4>
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
                               <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
-                              <div className="flex items-center gap-2 mt-4 text-purple-600">
+                              <div className="flex items-center gap-2 mt-4 text-gray-700">
                                 <Eye className="w-4 h-4" />
                                 <span className="text-sm font-medium">Ver detalhes</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -311,7 +297,7 @@ export default function Home() {
                           onClick={() => setSelectedImage(image)}
                           className="group cursor-pointer"
                         >
-                          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                          <div className="bg-[#F5F3EF] rounded-2xl shadow-lg overflow-hidden border border-[#D6D6D6] hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
                               <Image
                                 src={image.src}
@@ -323,9 +309,9 @@ export default function Home() {
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
                             <div className="p-6">
-                              <h4 className="text-lg font-semibold text-gray-900 mb-2">{image.alt}</h4>
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
                               <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
-                              <div className="flex items-center gap-2 mt-4 text-green-600">
+                              <div className="flex items-center gap-2 mt-4 text-gray-700">
                                 <Eye className="w-4 h-4" />
                                 <span className="text-sm font-medium">Ver natureza</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -360,7 +346,7 @@ export default function Home() {
                           onClick={() => setSelectedImage(image)}
                           className="group cursor-pointer"
                         >
-                          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                          <div className="bg-[#F5F3EF] rounded-2xl shadow-lg overflow-hidden border border-[#D6D6D6] hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
                               <Image
                                 src={image.src}
@@ -372,9 +358,9 @@ export default function Home() {
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
                             <div className="p-6">
-                              <h4 className="text-lg font-semibold text-gray-900 mb-2">{image.alt}</h4>
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
                               <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
-                              <div className="flex items-center gap-2 mt-4 text-yellow-600">
+                              <div className="flex items-center gap-2 mt-4 text-gray-700">
                                 <Eye className="w-4 h-4" />
                                 <span className="text-sm font-medium">Ver luz</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -409,7 +395,7 @@ export default function Home() {
                           onClick={() => setSelectedImage(image)}
                           className="group cursor-pointer"
                         >
-                          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                          <div className="bg-[#F5F3EF] rounded-2xl shadow-lg overflow-hidden border border-[#D6D6D6] hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
                               <Image
                                 src={image.src}
@@ -421,9 +407,9 @@ export default function Home() {
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
                             <div className="p-6">
-                              <h4 className="text-lg font-semibold text-gray-900 mb-2">{image.alt}</h4>
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
                               <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
-                              <div className="flex items-center gap-2 mt-4 text-green-600">
+                              <div className="flex items-center gap-2 mt-4 text-gray-700">
                                 <Eye className="w-4 h-4" />
                                 <span className="text-sm font-medium">Ver arte</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -458,7 +444,7 @@ export default function Home() {
                           onClick={() => setSelectedImage(image)}
                           className="group cursor-pointer"
                         >
-                          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                          <div className="bg-[#F5F3EF] rounded-2xl shadow-lg overflow-hidden border border-[#D6D6D6] hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
                               <Image
                                 src={image.src}
@@ -470,9 +456,9 @@ export default function Home() {
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
                             <div className="p-6">
-                              <h4 className="text-lg font-semibold text-gray-900 mb-2">{image.alt}</h4>
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
                               <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
-                              <div className="flex items-center gap-2 mt-4 text-green-600">
+                              <div className="flex items-center gap-2 mt-4 text-gray-700">
                                 <Eye className="w-4 h-4" />
                                 <span className="text-sm font-medium">Ver arte</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -507,7 +493,7 @@ export default function Home() {
                           onClick={() => setSelectedImage(image)}
                           className="group cursor-pointer"
                         >
-                          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                          <div className="bg-[#F5F3EF] rounded-2xl shadow-lg overflow-hidden border border-[#D6D6D6] hover:shadow-2xl transition-all duration-500">
                             <div className="aspect-[4/5] relative overflow-hidden">
                               <Image
                                 src={image.src}
@@ -519,9 +505,9 @@ export default function Home() {
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                             </div>
                             <div className="p-6">
-                              <h4 className="text-lg font-semibold text-gray-900 mb-2">{image.alt}</h4>
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
                               <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
-                              <div className="flex items-center gap-2 mt-4 text-blue-600">
+                              <div className="flex items-center gap-2 mt-4 text-gray-700">
                                 <Eye className="w-4 h-4" />
                                 <span className="text-sm font-medium">Ver estações</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -570,7 +556,7 @@ export default function Home() {
                         onClick={() => setSelectedImage(image)}
                         className="group cursor-pointer"
                       >
-                        <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                        <div className="bg-[#F5F3EF] rounded-2xl shadow-lg overflow-hidden border border-[#D6D6D6] hover:shadow-2xl transition-all duration-500">
                           <div className="aspect-[4/5] relative overflow-hidden">
                             <Image
                               src={image.src}
@@ -582,9 +568,9 @@ export default function Home() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                           </div>
                           <div className="p-6">
-                            <h4 className="text-lg font-semibold text-gray-900 mb-2">{image.alt}</h4>
+                            <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
                             <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
-                            <div className="flex items-center gap-2 mt-4 text-purple-600">
+                            <div className="flex items-center gap-2 mt-4 text-gray-700">
                               <Eye className="w-4 h-4" />
                               <span className="text-sm font-medium">Ver detalhes</span>
                               <ArrowRight className="w-4 h-4" />
@@ -616,7 +602,7 @@ export default function Home() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
+              className="relative max-w-4xl w-full bg-[#F5F3EF] rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
             >
               <Image
                 src={selectedImage.src}
@@ -626,19 +612,19 @@ export default function Home() {
                 height={1000}
               />
               <div className="p-4 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{selectedImage.alt}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">{selectedImage.alt}</h3>
                 <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">{selectedImage.story}</p>
                 <div className="flex items-center gap-2">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     selectedImage.category === 'landscape' 
-                      ? 'bg-purple-100 text-purple-800' 
+                      ? 'bg-[#E8E1D4] text-gray-800' 
                       : selectedImage.category === 'nature' 
-                        ? 'bg-pink-100 text-pink-800'
+                        ? 'bg-[#D6D6D6] text-gray-800'
                         : selectedImage.category === 'light' 
-                          ? 'bg-yellow-100 text-yellow-800'
+                          ? 'bg-[#E8E1D4] text-gray-800'
                           : selectedImage.category === 'art' 
-                            ? 'bg-green-100 text-green-800'
-                            : 'bg-blue-100 text-blue-800'
+                            ? 'bg-[#D6D6D6] text-gray-800'
+                            : 'bg-[#E8E1D4] text-gray-800'
                   }`}>
                     {selectedImage.category === 'landscape' ? 'Paisagem' : selectedImage.category === 'nature' ? 'Natureza' : selectedImage.category === 'light' ? 'Luz' : selectedImage.category === 'art' ? 'Arte' : 'Estação'}
                   </span>
@@ -646,7 +632,7 @@ export default function Home() {
               </div>
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white/90 rounded-full flex items-center justify-center text-gray-900 hover:bg-white transition-colors shadow-lg text-lg sm:text-xl"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-[#F5F3EF]/90 rounded-full flex items-center justify-center text-gray-800 hover:bg-[#E8E1D4] transition-colors shadow-lg text-lg sm:text-xl"
               >
                 ×
               </button>
@@ -656,27 +642,27 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Magazine Footer */}
-      <footer className="bg-gray-900 text-white py-12 sm:py-16 px-4 sm:px-6">
+      <footer className="bg-[#D6D6D6] text-gray-800 py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-8">
-            <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <div className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
               <Instagram className="w-5 h-5" />
               <span className="text-sm font-medium">@iluminafotografia_</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer">
+            <div className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
               <Mail className="w-5 h-5" />
               <span className="text-sm font-medium">iluminafotografia4@gmail.com</span>
             </div>
           </div>
           
           <div className="flex items-center justify-center mb-6">
-            <p className="text-gray-300 text-base sm:text-lg font-light max-w-4xl">
+            <p className="text-gray-700 text-base sm:text-lg font-light max-w-4xl">
               Ilumina Fotografia, onde cada imagem é um silêncio que toca, uma luz que revela o que o mundo apressado não nos permite ver!
             </p>
           </div>
           
-          <div className="border-t border-gray-800 pt-8">
-            <p className="text-gray-500 text-xs sm:text-sm">
+          <div className="border-t border-gray-400 pt-8">
+            <p className="text-gray-600 text-xs sm:text-sm">
               © 2024 Ilumina Fotografia - Galeria Visual • Todos os direitos reservados
             </p>
           </div>
