@@ -156,7 +156,6 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
           </div>
           <div className="p-6">
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">{image.alt}</h4>
             <p className="text-gray-600 text-sm leading-relaxed">{image.story}</p>
             <div className="flex items-center gap-2 mt-4 text-gray-700">
               <Eye className="w-4 h-4" />
