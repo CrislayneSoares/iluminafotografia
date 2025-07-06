@@ -6,30 +6,31 @@ import { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 
 const images = [
-  { src: '/imgs/imagem1.jpeg', alt: 'Campos dourados ao entardecer', category: 'landscape', story: 'Campos dourados ao entardecer' },
-  { src: '/imgs/imagem2.jpeg', alt: 'Paisagem serena', category: 'landscape', story: 'Paisagem serena' },
-  { src: '/imgs/imagem3.jpeg', alt: 'Horizonte dourado', category: 'landscape', story: 'Horizonte dourado' },
-  { src: '/imgs/imagem4.jpeg', alt: 'No abraço do horizonte', category: 'nature', story: 'No abraço do horizonte, o campo sonha com o céu' },
-  { src: '/imgs/imagem5.jpeg', alt: 'Campo e céu', category: 'nature', story: 'Campo e céu' },
-  { src: '/imgs/imagem6.jpeg', alt: 'Sonho do campo', category: 'nature', story: 'Sonho do campo' },
-  { src: '/imgs/imagem7.jpeg', alt: 'O sol também sabe acariciar', category: 'light', story: 'O sol também sabe acariciar' },
-  { src: '/imgs/imagem8.jpeg', alt: 'Carícia do sol', category: 'light', story: 'Carícia do sol' },
-  { src: '/imgs/imagem9.jpg', alt: 'Fotografia com alma', category: 'art', story: 'É fotografia, sim. Mas quando feita com alma, torna-se arte' },
-  { src: '/imgs/imagem10.JPG', alt: 'Poesia entre pedras', category: 'art', story: 'A fotografia autoral, revela a poesia escondida entre as pedras e os passos' },
-  { src: '/imgs/imagem11.jpeg', alt: 'Arte revelada', category: 'art', story: 'A arte revela o que vive dentro de quem olha' },
-  { src: '/imgs/imagem12.JPG', alt: 'Contemplação', category: 'art', story: 'Contemplação' },
-  { src: '/imgs/imagem13.JPG', alt: 'Revelação interior', category: 'art', story: 'Revelação interior' },
-  { src: '/imgs/imagem14.JPG', alt: 'Beleza das estações', category: 'seasons', story: 'Beleza nas marcas das estações do tempo' },
-  { src: '/imgs/imagem15.JPG', alt: 'Marcas do tempo', category: 'seasons', story: 'Marcas do tempo' },
-  { src: '/imgs/imagem16.JPG', alt: 'Estações', category: 'seasons', story: 'Estações' },
-  { src: '/imgs/imagem17.JPG', alt: 'Tempo e beleza', category: 'seasons', story: 'Tempo e beleza' },
-  { src: '/imgs/imagem19.JPG', alt: 'Paisagem contemplativa', category: 'landscape', story: 'Paisagem contemplativa' },
-  { src: '/imgs/imagem20.JPG', alt: 'Horizonte sereno', category: 'landscape', story: 'Horizonte sereno' },
-  { src: '/imgs/imagem21.JPG', alt: 'Campo em paz', category: 'landscape', story: 'Campo em paz' },
-  { src: '/imgs/imagem22.JPG', alt: 'Estação dourada', category: 'seasons', story: 'Estação dourada' },
-  { src: '/imgs/imagem23.JPG', alt: 'Tempo em cores', category: 'seasons', story: 'Tempo em cores' },
-  { src: '/imgs/imagem24.JPG', alt: 'Beleza temporal', category: 'seasons', story: 'Beleza temporal' },
-  { src: '/imgs/imagem25.jpeg', alt: 'Última contemplação', category: 'landscape', story: 'Última contemplação' },
+  { src: '/imgs/imagem1.jpeg', alt: 'Campos dourados ao entardecer', category: 'campo', story: 'A fotografia acaba, mas a luz floresce.' },
+  { src: '/imgs/imagem2.jpeg', alt: 'Paisagem serena', category: 'aguas', story: 'Um pôr do sol que dança sobre as águas, e a natureza em sua forma mais poética.' },
+  { src: '/imgs/imagem3.jpeg', alt: 'Horizonte dourado', category: 'campo', story: 'Uma leveza que toca o coração sem pedir palavras.' },
+  { src: '/imgs/imagem4.jpeg', alt: 'No abraço do horizonte', category: 'campo', story: 'Entre galhos secos, a luz encontra espaço para renascer.' },
+  { src: '/imgs/imagem5.jpeg', alt: 'Campo e céu', category: 'campo', story: 'O sol toca o que o tempo deixou para trás.' },
+  { src: '/imgs/imagem6.jpeg', alt: 'Sonho do campo', category: 'campo', story: 'Na mira da minha lente, uma árvore-menina: cabelos secos ao vento, sonhando sob o azul do céu.' },
+  { src: '/imgs/imagem7.jpeg', alt: 'O sol também sabe acariciar', category: 'aguas', story: 'O céu se encontra com o infinito das águas, e a luz se dissolve em poesia líquida.' },
+  { src: '/imgs/imagem8.jpeg', alt: 'Carícia do sol', category: 'horizonte', story: 'Na simplicidade da natureza, a alma se reencontra.' },
+  { src: '/imgs/imagem9.jpg', alt: 'Fotografia com alma', category: 'horizonte', story: 'Leveza que atravessa os mundos.' },
+  { src: '/imgs/imagem10.JPG', alt: 'Poesia entre pedras', category: 'campo', story: 'Um momento suspenso, onde a alma respira leve e livre.' },
+  { src: '/imgs/imagem11.jpeg', alt: 'Arte revelada', category: 'campo', story: 'Luz que acolhe, espinho que ensina.' },
+  { src: '/imgs/imagem12.JPG', alt: 'Contemplação', category: 'poesia', story: 'Quando o olhar se volta para dentro, a paz floresce.' },
+  { src: '/imgs/imagem13.JPG', alt: 'Revelação interior', category: 'poesia', story: 'Revelação interior' },
+  { src: '/imgs/imagem14.JPG', alt: 'Beleza das estações', category: 'poesia', story: 'Que cada imagem seja um convite para respirar fundo e sorrir' },
+  { src: '/imgs/imagem15.JPG', alt: 'Marcas do tempo', category: 'muros', story: 'Fotografar arquitetura é revelar a poesia do espaço em silêncio.' },
+  { src: '/imgs/imagem16.JPG', alt: 'Estações', category: 'muros', story: 'Entre janelas antigas e galhos nus, a fotografia encontra o silêncio do tempo que passa.' },
+  { src: '/imgs/imagem17.JPG', alt: 'Tempo e beleza', category: 'muros', story: 'Momentos simples, sentimentos imensos.' },
+  { src: '/imgs/imagem18.jpeg', alt: 'Poesia entre pedras e passos', category: 'muros', story: 'Fotografar é treinar o olhar para encontrar poesia onde ninguém mais vê.' },
+  { src: '/imgs/imagem19.JPG', alt: 'Paisagem contemplativa', category: 'aguas', story: 'Um instante em que a alma se reconhece na beleza da arquitetura.' },
+  { src: '/imgs/imagem20.JPG', alt: 'Horizonte sereno', category: 'aguas', story: 'A luz do sol não pede licença, atravessa tudo, e pela lente, revela o que os olhos sozinhos não ousam sentir.' },
+  { src: '/imgs/imagem21.JPG', alt: 'Campo em paz', category: 'aguas', story: 'Uma obra de Arte da vida REAL em forma de fotografia.' },
+  { src: '/imgs/imagem22.JPG', alt: 'Estação dourada', category: 'estacoes', story: 'Entre silêncios de inverno, uma árvore ousa florir como quem insiste em existir onde tudo adormece.' },
+  { src: '/imgs/imagem23.JPG', alt: 'Tempo em cores', category: 'estacoes', story: 'A vida ensina no tempo certo.' },
+  { src: '/imgs/imagem24.JPG', alt: 'Beleza temporal', category: 'estacoes', story: 'Dois bancos vazios, e o inverno dizendo tudo o que o silêncio nunca ousou.' },
+  { src: '/imgs/imagem25.jpeg', alt: 'Última contemplação', category: 'estacoes', story: 'A leveza que a fotografia autoral me traz não se explica, apenas se sente.' },
 ];
 
 export default function Home() {
@@ -47,13 +48,12 @@ export default function Home() {
     ? images 
     : images.filter(img => img.category === selectedCategory);
 
-  const camposDouradosImages = images.slice(0, 6);
-  const abracoHorizonteImages = images.slice(6, 9);
-  const solAcariciarImages = images.slice(9, 11);
-  const fotografiaAlmaImages = images.slice(11, 14);
-  const poesiaPedrasImages = images.slice(14, 18);
-  const arteRevelaImages = images.slice(18, 21);
-  const estacoesTempoImages = images.slice(21, 25);
+  const campoImages = [images[0], images[2], images[3], images[4], images[5], images[9], images[10]]; // 1, 3, 4, 5, 6, 10, 11
+  const horizonteImages = [images[7], images[8]]; // 8, 9
+  const poesiaVisualImages = [images[11], images[12], images[13]]; // 12, 13, 14
+  const entreMurosJanelasImages = [images[14], images[15], images[16], images[17]]; // 15, 16, 17, 18
+  const sobAguasImages = [images[1], images[6], images[18], images[19], images[20]]; // 2, 7, 19, 20, 21
+  const estacoesTempoImages = [images[21], images[22], images[23], images[24]]; // 22, 23, 24, 25
 
   // Fechar menu quando clicar fora
   useEffect(() => {
@@ -299,7 +299,7 @@ export default function Home() {
                   <div className="space-y-4">
                     <h3 className="text-lg font-bold text-gray-800 mb-4">CATEGORIAS</h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {['all', 'landscape', 'nature', 'light', 'art', 'seasons'].map((category) => (
+            {['all', 'campo', 'horizonte', 'poesia', 'muros', 'aguas', 'estacoes'].map((category) => (
               <button
                 key={category}
                           onClick={() => {
@@ -312,7 +312,7 @@ export default function Home() {
                     : 'bg-[#F5F3EF] text-gray-600 hover:bg-[#E8E1D4] border border-[#D6D6D6]'
                 }`}
               >
-                {category === 'all' ? 'TODAS' : category === 'landscape' ? 'PAISAGENS' : category === 'nature' ? 'NATUREZA' : category === 'light' ? 'LUZ' : category === 'art' ? 'ARTE' : 'ESTAÇÕES'}
+                {category === 'all' ? 'TODAS' : category === 'campo' ? 'CAMPO' : category === 'horizonte' ? 'HORIZONTE' : category === 'poesia' ? 'POESIA VISUAL' : category === 'muros' ? 'ENTRE MUROS' : category === 'aguas' ? 'SOB ÁGUAS' : 'ESTAÇÕES'}
               </button>
             ))}
           </div>
@@ -478,134 +478,114 @@ export default function Home() {
             >
               {selectedCategory === 'all' && (
                 <div className="space-y-20">
-                  {/* Campos dourados ao entardecer */}
+                  {/* Campo */}
                   <div>
                     <motion.div
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="mb-12"
                     >
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">CAMPOS DOURADOS AO ENTARDECER</h3>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">CAMPO</h3>
                       <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
-                        Paisagens que capturam a beleza dourada do entardecer nos campos.
+                        Paisagens que capturam a essência do campo e sua beleza natural.
                       </p>
                     </motion.div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                      {camposDouradosImages.map((image, index) => (
+                      {campoImages.map((image, index) => (
                         <GalleryImage key={index} image={image} index={index} />
                       ))}
                     </div>
                   </div>
 
-                  {/* No abraço do horizonte */}
+                  {/* Horizonte */}
                   <div>
                     <motion.div
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="mb-12"
                     >
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">NO ABRAÇO DO HORIZONTE, O CAMPO SONHA COM O CÉU</h3>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">HORIZONTE</h3>
                       <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
-                        Momentos onde o campo e o céu se encontram em harmonia perfeita.
+                        Momentos onde o horizonte se revela em sua plenitude.
                       </p>
                     </motion.div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {abracoHorizonteImages.map((image, index) => (
+                      {horizonteImages.map((image, index) => (
                         <GalleryImage key={index} image={image} index={index} />
                       ))}
                     </div>
                   </div>
 
-                  {/* O sol também sabe acariciar */}
+                  {/* Poesia Visual */}
                   <div>
                     <motion.div
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="mb-12"
                     >
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">O SOL TAMBÉM SABE ACARICIAR</h3>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">POESIA VISUAL</h3>
                       <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
-                        Luz suave que acaricia e transforma paisagens em poesia visual.
+                        Imagens que transcendem o visual e se tornam poesia.
                       </p>
                     </motion.div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                      {solAcariciarImages.map((image, index) => (
+                      {poesiaVisualImages.map((image, index) => (
                         <GalleryImage key={index} image={image} index={index} />
                       ))}
                     </div>
                   </div>
 
-                  {/* É fotografia, sim. Mas quando feita com alma, torna-se arte */}
+                  {/* Entre Muros e Janelas */}
                   <div>
                     <motion.div
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="mb-12"
                     >
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">É FOTOGRAFIA, SIM. MAS QUANDO FEITA COM ALMA, TORNA-SE ARTE</h3>
-                      <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
-                        A fotografia autoral revela a poesia escondida entre as pedras e os passos.
-                      </p>
-                    </motion.div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {fotografiaAlmaImages.map((image, index) => (
-                        <GalleryImage key={index} image={image} index={index} />
-                      ))}
-                              </div>
-                            </div>
-
-                  {/* A fotografia autoral, revela a poesia escondida entre as pedras e os passos */}
-                  <div>
-                    <motion.div
-                      initial={{ opacity: 0, x: -30 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      className="mb-12"
-                    >
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">A FOTOGRAFIA AUTORAL, REVELA A POESIA ESCONDIDA ENTRE AS PEDRAS E OS PASSOS</h3>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">ENTRE MUROS E JANELAS</h3>
                       <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
                         A poesia revelada através da fotografia autoral.
                       </p>
                     </motion.div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {poesiaPedrasImages.map((image, index) => (
+                      {entreMurosJanelasImages.map((image, index) => (
                         <GalleryImage key={index} image={image} index={index} />
                       ))}
                     </div>
                   </div>
 
-                  {/* A arte revela o que vive dentro de quem olha */}
+                  {/* Sob as Águas */}
                   <div>
                     <motion.div
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="mb-12"
                     >
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">A ARTE REVELA O QUE VIVE DENTRO DE QUEM OLHA</h3>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">SOB AS ÁGUAS</h3>
                       <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
-                        A arte como espelho da alma de quem contempla.
+                        Reflexões e contemplações sobre as águas.
                       </p>
                     </motion.div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {arteRevelaImages.map((image, index) => (
+                      {sobAguasImages.map((image, index) => (
                         <GalleryImage key={index} image={image} index={index} />
                       ))}
                     </div>
                   </div>
 
-                  {/* Beleza nas marcas das estações do tempo */}
+                  {/* As Estações do Tempo */}
                   <div>
                     <motion.div
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="mb-12"
                     >
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">BELEZA NAS MARCAS DAS ESTAÇÕES DO TEMPO</h3>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">AS ESTAÇÕES DO TEMPO</h3>
                       <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
                         A poesia das estações capturada em cada momento.
                       </p>
@@ -629,18 +609,20 @@ export default function Home() {
                     className="mb-12"
                   >
                     <h3 className="text-4xl font-bold text-gray-900 mb-4">
-                      {selectedCategory === 'landscape' ? 'PAISAJES' : selectedCategory === 'nature' ? 'NATUREZA' : selectedCategory === 'light' ? 'LUZ' : selectedCategory === 'art' ? 'ARTE' : 'ESTAÇÕES'}
+                      {selectedCategory === 'campo' ? 'CAMPO' : selectedCategory === 'horizonte' ? 'HORIZONTE' : selectedCategory === 'poesia' ? 'POESIA VISUAL' : selectedCategory === 'muros' ? 'ENTRE MUROS E JANELAS' : selectedCategory === 'aguas' ? 'SOB AS ÁGUAS' : 'AS ESTAÇÕES DO TEMPO'}
                     </h3>
                     <p className="text-xl text-gray-600 max-w-3xl">
-                      {selectedCategory === 'landscape' 
-                        ? 'Retratos que capturam a beleza natural e a harmonia das paisagens.'
-                        : selectedCategory === 'nature' 
-                          ? 'Retratos que capturam a beleza natural e a harmonia das paisagens.'
-                          : selectedCategory === 'light' 
-                            ? 'Retratos que capturam a beleza natural e a harmonia das paisagens.'
-                            : selectedCategory === 'art' 
-                              ? 'Retratos que capturam a beleza natural e a harmonia das paisagens.'
-                              : 'Retratos que capturam a beleza natural e a harmonia das paisagens.'
+                      {selectedCategory === 'campo' 
+                        ? 'Paisagens que capturam a essência do campo e sua beleza natural.'
+                        : selectedCategory === 'horizonte' 
+                          ? 'Momentos onde o horizonte se revela em sua plenitude.'
+                          : selectedCategory === 'poesia' 
+                            ? 'Imagens que transcendem o visual e se tornam poesia.'
+                            : selectedCategory === 'muros' 
+                              ? 'A poesia revelada através da fotografia autoral.'
+                              : selectedCategory === 'aguas' 
+                                ? 'Reflexões e contemplações sobre as águas.'
+                                : 'A poesia das estações capturada em cada momento.'
                       }
                     </p>
                   </motion.div>
@@ -696,17 +678,19 @@ export default function Home() {
                     <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-3">{selectedImage.story}</p>
                 <div className="flex items-center gap-2">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    selectedImage.category === 'landscape' 
+                    selectedImage.category === 'campo' 
                       ? 'bg-[#E8E1D4] text-gray-800' 
-                      : selectedImage.category === 'nature' 
+                      : selectedImage.category === 'horizonte' 
                         ? 'bg-[#D6D6D6] text-gray-800'
-                        : selectedImage.category === 'light' 
+                        : selectedImage.category === 'poesia' 
                           ? 'bg-[#E8E1D4] text-gray-800'
-                          : selectedImage.category === 'art' 
+                          : selectedImage.category === 'muros' 
                             ? 'bg-[#D6D6D6] text-gray-800'
-                            : 'bg-[#E8E1D4] text-gray-800'
+                            : selectedImage.category === 'aguas' 
+                              ? 'bg-[#E8E1D4] text-gray-800'
+                              : 'bg-[#D6D6D6] text-gray-800'
                   }`}>
-                    {selectedImage.category === 'landscape' ? 'Paisagem' : selectedImage.category === 'nature' ? 'Natureza' : selectedImage.category === 'light' ? 'Luz' : selectedImage.category === 'art' ? 'Arte' : 'Estação'}
+                    {selectedImage.category === 'campo' ? 'Campo' : selectedImage.category === 'horizonte' ? 'Horizonte' : selectedImage.category === 'poesia' ? 'Poesia Visual' : selectedImage.category === 'muros' ? 'Entre Muros' : selectedImage.category === 'aguas' ? 'Sob Águas' : 'Estações'}
                   </span>
                 </div>
               </div>
