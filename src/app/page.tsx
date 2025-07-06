@@ -672,9 +672,8 @@ export default function Home() {
               {/* Info Panel - Fixed at bottom */}
               <div className="bg-[#F5F3EF] p-4 sm:p-6 border-t border-[#D6D6D6]">
                 <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">{selectedImage.alt}</h3>
-                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-3">{selectedImage.story}</p>
+                                <div className="flex-1">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-3">{selectedImage.story}</p>
                 <div className="flex items-center gap-2">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     selectedImage.category === 'campo' 
